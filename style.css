@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    background-color: white;
+    /* background-color: rgb(30, 24, 44); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+header {
+    margin-top: 40px;
+}
+
+header h1 {
+    font-size: 56px;
+    font-weight: 100;
+}
+
+header p {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.transactions {
+    text-align: center;
+}
+
+.transactions h2 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 38px;
+}
+
+.transactions-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.income-area {
+    width: 300px;
+    min-height: 100px;
+    border: 1px solid rgb(194, 194, 194);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.income-area h3 {
+    font-size: 30px;
+    color: rgb(61, 180, 61);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.expenses-area {
+    width: 300px;
+    min-height: 100px;
+    border: 1px solid rgb(194, 194, 194);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expenses-area h3 {
+    font-size: 30px;
+    color: rgb(235, 67, 67);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.transaction {
+    display: flex;
+    width: 260px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.transaction:last-child {
+    margin-bottom: 20px;
+}
+
+.transaction button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.income-area .transaction-amount {
+    color: rgb(61, 180, 61);
+    font-weight: 800;
+}
+
+.expenses-area .transaction-amount {
+    color: rgb(235, 67, 67);
+    font-weight: 800;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 30px;
+    font-size: 30px;
+    gap: 30px;
+}
+
+.panel h2 {
+    font-weight: 400;
+}
+
+.available-founds {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.panel button {
+    background: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.panel button:hover {
+    background-color: grey;
+}
+
+.panel button:last-child {
+    margin-left: 30px;
+}
+
+.style {
+    display: flex;
+    gap: 70px;
+}
+
+.light {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dark {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(30, 24, 44);
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.add-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(155, 155, 255, 1) 30%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    height: 100vh;
+    font-size: 32px;
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+form input {
+    width: 70%;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+form select {
+    width: 70%;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.add-form button {
+    background: none;
+    border: 2px solid white;
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-form button:hover {
+    background-color: grey;
+}

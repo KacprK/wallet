@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@200;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/94e4ab96b7.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Wallet</title>
+    </head>
+    <body>
+        <header>
+            <h1><i class="fas fa-wallet"></i> Wallet</h1>
+            <p>Your finance manager.</p>
+        </header>
+        <main>
+            <section class="transactions">
+                <h2 class="title">Transactions list</h2>
+
+                <div class="transactions-list">
+                    <div class="income-area">
+                        <h3>Income:</h3>
+                    </div>
+
+                    <div class="expenses-area">
+                        <h3>Spending:</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Available founds:</h2>
+                <p class="available-founds">0zł</p>
+                <div class="buttons">
+                    <button class="add-transaction">
+                        <i class="fas fa-plus"></i> Add transaction
+                    </button>
+                    <button class="delete-all">
+                        <i class="fas fa-trash"></i> Delete all
+                    </button>
+                </div>
+                <h2>Style</h2>
+                <div class="style">
+                    <div class="light"></div>
+                    <div class="dark"></div>
+                </div>
+            </section>
+        </main>
+
+        <section class="add-form">
+            <h2>Dodaj nową transakcję</h2>
+            <form>
+                <label for="name"> Name:</label>
+                <input type="text" id="name" placeholder="Transaction name" />
+
+                <label for="amount">Amount:</label>
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Transaction amount"
+                />
+
+                <label for="category">Choose category:</label>
+                <select class="category">
+                    <option value="0" selected disabled>
+                        -- choose category --
+                    </option>
+                    <option value="1">[+]Deposit</option>
+                    <option value="2">[-]Shopping</option>
+                    <option value="3">[-]Food</option>
+                    <option value="4">[-]Others</option>
+                </select>
+            </form>
+            <p class="error"></p>
+            <div class="add-form-btns">
+                <button class="save"><i class="fas fa-save"></i> Save</button>
+                <button class="cancel">
+                    <i class="fas fa-cancel"></i> Cancel
+                </button>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </body>
+</html>
