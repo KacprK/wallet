@@ -40,6 +40,20 @@ const checkForm = () => {
         error.textContent = 'Choose category';
         return false;
     }
+    if (
+        transactionCategory.value === '1' &&
+        Number(transactionAmount.value) < 0
+    ) {
+        error.textContent = 'Choose category with minus [-]';
+        return false;
+    }
+    if (
+        Number(transactionCategory.value) > 1 &&
+        Number(transactionAmount.value) > 0
+    ) {
+        error.textContent = 'Choose category with plus [+]';
+        return false;
+    }
     return true;
 };
 
