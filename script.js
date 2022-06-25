@@ -15,6 +15,8 @@ const saveBtn = addForm.querySelector('.save');
 const cancelBtn = addForm.querySelector('.cancel');
 const error = addForm.querySelector('.error');
 
+const root = document.querySelector(':root');
+console.log(root);
 let transactionId = 0;
 let balance = 0;
 
@@ -106,6 +108,15 @@ const addTransaction = () => {
     }
 };
 
+const darkMode = () => {
+    root.style.setProperty('--first-color', '#f9f9f9');
+    root.style.setProperty('--second-color', '#14161f');
+};
+const lightMode = () => {
+    root.style.setProperty('--first-color', '#14161f');
+    root.style.setProperty('--second-color', '#f9f9f9');
+};
+
 addTransactionBtn.addEventListener('click', () => {
     addForm.style.display = 'flex';
 });
@@ -122,3 +133,7 @@ deleteAllBtn.addEventListener('click', () => {
 });
 
 saveBtn.addEventListener('click', addTransaction);
+
+darkModeBtn.addEventListener('click', darkMode);
+
+lightModeBtn.addEventListener('click', lightMode);
